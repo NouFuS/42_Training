@@ -5,19 +5,21 @@
 #include <unistd.h>
 #include"ex.h"
 
-int run_test(){
+int run_test(int n){
     int debug = 0;
+
     /* Gathering student answers */
     char buffer1[999] = "";
     char buffer2[999] = "";
 
-    get_answer_student(buffer1);
+    get_answer_student(buffer1, n);
 
     /* Gathering corresponding correct answers */
     
-    get_answer_reference(buffer2);
+    get_answer_reference(buffer2, n);
 
     if(debug == 1){
+        printf("*********************\n\n");
         printf("Etudiant:\n\n");
         printf("%s\n\n", buffer1);
         printf("Correction:\n\n");
@@ -35,7 +37,7 @@ int run_test(){
     return result;
 }
 
-void get_answer_student(char *buf){
+void get_answer_student(char *buf, int n){
     int  stdout_bk; //is fd for stdout backup
     stdout_bk = dup(fileno(stdout));
     int pipefd[2];
@@ -46,7 +48,7 @@ void get_answer_student(char *buf){
     /* ************************************************************ */
 
     // Student function
-    ft_print_numbers();
+    ft_is_negative(n);
 
     /* ************************************************************ */
 
@@ -55,7 +57,7 @@ void get_answer_student(char *buf){
     dup2(stdout_bk, fileno(stdout));//restore
 }
 
-void get_answer_reference(char *buf){
+void get_answer_reference(char *buf, int n){
     int  stdout_bk; //is fd for stdout backup
     stdout_bk = dup(fileno(stdout));
     int pipefd[2];
@@ -66,7 +68,7 @@ void get_answer_reference(char *buf){
     /* ************************************************************ */
     
     // Reference function
-    ft_print_numbers_correction();
+    correction(n);
 
     /* ************************************************************ */
 
@@ -79,7 +81,28 @@ int main(void) {
     int is_ok = 0;
 
     if(is_ok == 0){
-        is_ok = run_test();
+        is_ok = run_test(-10);
+    }
+    if(is_ok == 0){
+        is_ok = run_test(0);
+    }
+    if(is_ok == 0){
+        is_ok = run_test(-1);
+    }
+    if(is_ok == 0){
+        is_ok = run_test(1);
+    }
+    if(is_ok == 0){
+        is_ok = run_test(10);
+    }
+    if(is_ok == 0){
+        is_ok = run_test(-6);
+    }
+    if(is_ok == 0){
+        is_ok = run_test(-1000);
+    }
+    if(is_ok == 0){
+        is_ok = run_test(1000);
     }
 
     if(is_ok == 0){

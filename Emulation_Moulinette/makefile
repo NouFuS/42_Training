@@ -19,3 +19,7 @@ compile_and_run_c00ex02: ${corrections}ex02/ft_print_reverse_alphabet.c ${alumni
 compile_and_run_c00ex03: ${corrections}ex03/correction.c ${alumni}ex03/ft_print_numbers.c
 	${CC} $^ -o ${corrections}ex03/main ${corrections}ex03/main.c ${CFLAGS}
 	./${corrections}ex03/main
+
+compile_and_run_c00ex04: ${corrections}ex04/correction.c ${alumni}ex04/ft_is_negative.c
+	${CC} $^ -o ${corrections}ex04/main ${corrections}ex04/main.c ${CFLAGS}
+	./${corrections}ex04/main
