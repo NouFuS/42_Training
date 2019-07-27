@@ -31,3 +31,7 @@ compile_and_run_c00ex05: ${corrections}ex05/correction.c ${alumni}ex05/ft_print_
 compile_and_run_c00ex06: ${corrections}ex06/correction.c ${alumni}ex06/ft_print_comb2.c
 	${CC} $^ -o ${corrections}ex06/main ${corrections}ex06/main.c ${CFLAGS}
 	./${corrections}ex06/main
+
+compile_and_run_c00ex07: ${corrections}ex07/correction.c ${alumni}ex07/ft_putnbr.c
+	${CC} $^ -o ${corrections}ex07/main ${corrections}ex07/main.c ${CFLAGS}
+	./${corrections}ex07/main
