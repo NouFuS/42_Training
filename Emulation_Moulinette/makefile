@@ -27,3 +27,7 @@ compile_and_run_c00ex04: ${corrections}ex04/correction.c ${alumni}ex04/ft_is_neg
 compile_and_run_c00ex05: ${corrections}ex05/correction.c ${alumni}ex05/ft_print_comb.c
 	${CC} $^ -o ${corrections}ex05/main ${corrections}ex05/main.c ${CFLAGS}
 	./${corrections}ex05/main
+
+compile_and_run_c00ex06: ${corrections}ex06/correction.c ${alumni}ex06/ft_print_comb2.c
+	${CC} $^ -o ${corrections}ex06/main ${corrections}ex06/main.c ${CFLAGS}
+	./${corrections}ex06/main
