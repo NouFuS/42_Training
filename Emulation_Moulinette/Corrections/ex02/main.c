@@ -4,7 +4,11 @@
 #include <string.h>
 #include <unistd.h>
 
-#include"ex01.h"
+/* ************************************************************ */
+
+#include"ex02.h"
+
+/* ************************************************************ */
 
 int run_test(){
     int debug = 0;
@@ -44,8 +48,13 @@ void get_answer_student(char *buf){
     // What used to be stdout will now go to the pipe.
     dup2(pipefd[1], fileno(stdout));
 
-    /* Student function */
-    ft_print_alphabet();
+    /* ************************************************************ */
+
+    // Student function
+    ft_print_reverse_alphabet();
+
+    /* ************************************************************ */
+
     close(pipefd[1]);
     read(pipefd[0], buf, 998); 
     dup2(stdout_bk, fileno(stdout));//restore
@@ -59,8 +68,13 @@ void get_answer_reference(char *buf){
     // What used to be stdout will now go to the pipe.
     dup2(pipefd[1], fileno(stdout));
 
-    /* Reference function */
-    ft_print_alphabet_correction();
+    /* ************************************************************ */
+    
+    // Reference function
+    ft_print_reverse_alphabet_correction();
+
+    /* ************************************************************ */
+
     close(pipefd[1]);
     read(pipefd[0], buf, 998); 
     dup2(stdout_bk, fileno(stdout));//restore
