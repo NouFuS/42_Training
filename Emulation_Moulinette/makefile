@@ -2,8 +2,8 @@ corrections=DO_NOT_LOOK/
 alumni=../Lucie/
 
 CC=gcc
-#CFLAGS=-Wextra -Werror -Wall
 
+#CFLAGS=-Wextra -Werror -Wall
 compile_and_run_c00ex00: ${corrections}c00/ex00/ft_putchar.c ${alumni}c00/ex00/ft_putchar.c
 	${CC} $^ -o ${corrections}c00/ex00/main ${corrections}c00/ex00/main.c ${CFLAGS}
 	./${corrections}c00/ex00/main
