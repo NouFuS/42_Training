@@ -1,4 +1,4 @@
-corrections=Corrections/
+corrections=DO_NOT_LOOK/
 alumni=../Lucie/
 
 CC=gcc
