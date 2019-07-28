@@ -2,7 +2,7 @@ void correction(int n);
 void write_char(char c);
 void write_number_1digits(int n);
 void write_number_2digits(int n);
-void ft_putnbr(int n);
+void ft_print_combn(int n);
 
 void get_answer_student(char *buf, int n);
 void get_answer_reference(char *buf, int n);

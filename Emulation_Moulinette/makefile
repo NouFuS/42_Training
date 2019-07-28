@@ -2,7 +2,7 @@ corrections=Corrections/
 alumni=../Lucie/
 
 CC=gcc
-CFLAGS=-Wextra -Werror -Wall
+#CFLAGS=-Wextra -Werror -Wall
 
 compile_and_run_c00ex00: ${corrections}ex00/ft_putchar.c ${alumni}ex00/ft_putchar.c
 	${CC} $^ -o ${corrections}ex00/main ${corrections}ex00/main.c ${CFLAGS}
@@ -35,3 +35,7 @@ compile_and_run_c00ex06: ${corrections}ex06/correction.c ${alumni}ex06/ft_print_
 compile_and_run_c00ex07: ${corrections}ex07/correction.c ${alumni}ex07/ft_putnbr.c
 	${CC} $^ -o ${corrections}ex07/main ${corrections}ex07/main.c ${CFLAGS}
 	./${corrections}ex07/main
+
+compile_and_run_c00ex08: ${corrections}ex08/correction.c ${alumni}ex08/ft_print_combn.c
+	${CC} $^ -o ${corrections}ex08/main ${corrections}ex08/main.c ${CFLAGS}
+	./${corrections}ex08/main
