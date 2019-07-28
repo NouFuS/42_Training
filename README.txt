@@ -8,8 +8,8 @@ Pour proposer un exercice:
        - Ouvrir un terminal dans le dossier '42_Training/Emulation_Moulinette'
        - Lancer la commande en suivant la construction suivante:
        	 'make compile_and_run_{NomDuModule}ex{NumeroExercice}'
+       - La console affichera :
+         - Les erreurs eventuelles de compilation et d'execution
+         - Si la fonction correspond a ce qui est attendu.
 	 Ex: Pour lancer la verification de l'exercice 1, lancer:
 	 'make compile_and_run_c00ex00'
-     - La console affichera :
-       - Les erreurs eventuelles de compilation et d'execution
-       - Si la fonction correspond a ce qui est attendu.
