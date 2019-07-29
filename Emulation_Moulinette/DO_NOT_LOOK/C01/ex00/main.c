@@ -48,7 +48,11 @@ void get_answer_student(char *buf, int n){
     /* ************************************************************ */
 
     // Student function
-    ft_print_combn(n);
+    int val = n;
+    int  *ptr;
+    ptr = &val;
+    ft_ft(ptr);
+    printf("%d\n", *ptr);
 
     /* ************************************************************ */
 
@@ -65,8 +69,13 @@ void get_answer_reference(char *buf, int n){
     // What used to be stdout will now go to the pipe.
     dup2(pipefd[1], fileno(stdout));
  
+    int val = n;
+    int  *ptr;
+    ptr = &val;
+
     // Reference function
-    correction(n);
+    correction(ptr);
+    printf("%d\n", *ptr);
 
     close(pipefd[1]);
     read(pipefd[0], buf, 99998); 
@@ -75,6 +84,8 @@ void get_answer_reference(char *buf, int n){
 
 int main(void) {
     int is_ok = 0;
+
+    printf("\n");
 
     for(int i = 1; i<10 ;i++){
         if(is_ok == 0){

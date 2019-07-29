@@ -83,9 +83,9 @@ int main(void) {
 
     is_ok = run_test(9);
     for(int i = -999 ; i < 999 ; i = i+19){
-        // if(is_ok == 0){
-        is_ok = run_test(i);
-        // }
+        if(is_ok == 0){
+            is_ok = run_test(i);
+        }
     }
     
     if(is_ok == 0){
