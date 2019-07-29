@@ -3,7 +3,7 @@ alumni=../Lucie/
 
 CC=gcc
 
-#CFLAGS=-Wextra -Werror -Wall
+CFLAGS=-Wextra -Werror -Wall
 compile_and_run_C00ex00: ${corrections}C00/ex00/ft_putchar.c ${alumni}C00/ex00/ft_putchar.c
 	${CC} $^ -o ${corrections}C00/ex00/main ${corrections}C00/ex00/main.c ${CFLAGS}
 	./${corrections}C00/ex00/main
