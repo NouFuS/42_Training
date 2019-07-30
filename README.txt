@@ -18,3 +18,6 @@ Pour proposer un exercice:
          - Si la fonction correspond a ce qui est attendu.
     Ex: Pour lancer la verification de l'exercice 0, lancer:
 	 'make compile_and_run_C00ex00'
+
+!! Ce programme est en constante evolution et des nouvelles corrections sont ajoutees
+regulierements, n'oubliez pas de GIT PULL !!
