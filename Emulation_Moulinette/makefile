@@ -53,3 +53,19 @@ compile_and_run_C01ex01: ${corrections}C01/ex01/correction.c ${alumni}C01/ex01/f
 compile_and_run_C01ex02: ${corrections}C01/ex02/correction.c ${alumni}C01/ex02/ft_swap.c
 	${CC} $^ -o ${corrections}C01/ex02/main ${corrections}C01/ex02/main.c ${CFLAGS}
 	./${corrections}C01/ex02/main
+
+compile_and_run_C01ex03: ${corrections}C01/ex03/correction.c ${alumni}C01/ex03/ft_div_mod.c
+	${CC} $^ -o ${corrections}C01/ex03/main ${corrections}C01/ex03/main.c ${CFLAGS}
+	./${corrections}C01/ex03/main
+
+compile_and_run_C01ex04: ${corrections}C01/ex04/correction.c ${alumni}C01/ex04/ft_ultimate_div_mod.c
+	${CC} $^ -o ${corrections}C01/ex04/main ${corrections}C01/ex04/main.c ${CFLAGS}
+	./${corrections}C01/ex04/main
+
+compile_and_run_C01ex05: ${corrections}C01/ex05/correction.c ${alumni}C01/ex05/ft_putstr.c
+	${CC} $^ -o ${corrections}C01/ex05/main ${corrections}C01/ex05/main.c ${CFLAGS}
+	./${corrections}C01/ex05/main
+
+compile_and_run_C01ex06: ${corrections}C01/ex06/correction.c ${alumni}C01/ex06/ft_strlen.c
+	${CC} $^ -o ${corrections}C01/ex06/main ${corrections}C01/ex06/main.c ${CFLAGS}
+	./${corrections}C01/ex06/main
