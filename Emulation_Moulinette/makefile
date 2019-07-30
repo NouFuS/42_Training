@@ -3,8 +3,9 @@ alumni=../Lucie/
 
 CC=gcc
 
-# CFLAGS=-Wextra -Werror -Wall
- CFLAGS=-Wall
+CFLAGS=-Wextra -Werror -Wall
+# CFLAGS=-Wall
+
 compile_and_run_C00ex00: ${corrections}C00/ex00/ft_putchar.c ${alumni}C00/ex00/ft_putchar.c
 	${CC} $^ -o ${corrections}C00/ex00/main ${corrections}C00/ex00/main.c ${CFLAGS}
 	./${corrections}C00/ex00/main
@@ -69,3 +70,11 @@ compile_and_run_C01ex05: ${corrections}C01/ex05/correction.c ${alumni}C01/ex05/f
 compile_and_run_C01ex06: ${corrections}C01/ex06/correction.c ${alumni}C01/ex06/ft_strlen.c
 	${CC} $^ -o ${corrections}C01/ex06/main ${corrections}C01/ex06/main.c ${CFLAGS}
 	./${corrections}C01/ex06/main
+
+compile_and_run_C01ex07: ${corrections}C01/ex07/correction.c ${alumni}C01/ex07/ft_rev_int_tab.c
+	${CC} $^ -o ${corrections}C01/ex07/main ${corrections}C01/ex07/main.c ${CFLAGS}
+	./${corrections}C01/ex07/main
+
+compile_and_run_C01ex08: ${corrections}C01/ex08/correction.c ${alumni}C01/ex08/ft_sort_int_tab.c
+	${CC} $^ -o ${corrections}C01/ex08/main ${corrections}C01/ex08/main.c ${CFLAGS}
+	./${corrections}C01/ex08/main
