@@ -1,3 +1,7 @@
+Sont disponibles pour l'instant à la correction automatique:
+- C00
+- C01
+
 Pour configurer un nouvel utilisateur (par defaut: 'Lucie'):
      -Aller dans le makefile, et modifier le nom ligne 2.
 
